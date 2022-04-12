@@ -2,19 +2,22 @@ from random import random
 
 class Deck(object):
 
-    suits = [C, S, H, D]
-    units = [2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A]
+    deck = []
 
-    def __init__(self, card, suit, unit):
+    def __init__(self, card, suit, unit, deck):
         self.card = card
-        self.suit = suit
-        self.unit = unit
 
-        open(r, cardlist.txt)
-        for line in suits:
-            deck = []
+        with open('cardlist.txt') as CardList:
+            for line in CardList:
+                count = 0
+                count += 1
+                card = CardList[count]
+                deck.append(card)
 
     def shuffle(self):
-        random.card()
+        random.deck()
 
-    def pop(self):
+    def pop(self, deck, card):
+        deck.remove(card)
+
+
