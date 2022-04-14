@@ -25,5 +25,6 @@ class Card(object):
         return f'{self.suit}{self.unit}'
 
     def flip(self):
+        self.card.flip(self)
 
 
