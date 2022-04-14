@@ -2,7 +2,7 @@ from deck import Deck
 
 class Card(object):
 
-    shortNames = {"Two of Hearts": "2-H", "Three of Hearts": "3-H", "Four of Hearts": "4-H", "Five of Hearts": "5-H",
+    fullNames = {"Two of Hearts": "2-H", "Three of Hearts": "3-H", "Four of Hearts": "4-H", "Five of Hearts": "5-H",
                   "Six of Hearts": "6-H", "Seven of Hearts": "7-H", "Eight of Hearts": "8-H", "Nine of Hearts": "9-H",
                   "Ten of Hearts": "10-H", "Jack of Hearts": "J-H", "Queen of Hearts": "Q-H", "King of Hearts": "K-H",
                   "Ace of Hearts": "A-H", "Two of Diamonds": "2-D", "Three of Diamonds": "3-D", "Four of Diamonds": "4-D",
@@ -16,7 +16,20 @@ class Card(object):
                   "Seven of Clubs": "7-C", "Eight of Clubs": "8-C", "Nine of Clubs": "9-C", "Ten of Clubs": "10-C",
                   "Jack of Clubs": "J-C", "Queen of Clubs": "Q-C", "King of Clubs": "K-C", "Ace of Clubs": "A-C"}
 
-    def __init__(self, card, suit, unit, hardValue, softValue):
+    names = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King']
+    shortNames = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K']
+
+    shortNameDict = dict(zip(names, shortNames))
+
+    hardValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+    softValues = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+
+    hardValueDict = dict(zip(names, hardValues))
+
+    softValueDict = dict(zip(names, softValues))
+
+
+def __init__(self, card, hardValue, softValue):
         self.card = card
         self.hardValue = hardValue
         self.softValue = softValue
@@ -24,7 +37,15 @@ class Card(object):
     def __str__(self):
         return f'{self.suit}{self.unit}'
 
+    def hard_value(self):
+        for
+
+    def soft_value(self):
+
     def flip(self):
-        self.card.flip(self)
+        pass
+
+    def is_showing(self):
+        return self.is_showing()
 
 
