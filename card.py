@@ -29,18 +29,21 @@ class Card(object):
     softValueDict = dict(zip(names, softValues))
 
 
-def __init__(self, card, hardValue, softValue):
+    def __init__(self, card, hardValue, softValue):
         self.card = card
         self.hardValue = hardValue
         self.softValue = softValue
 
     def __str__(self):
-        return f'{self.suit}{self.unit}'
+        return f'{self.name}'
 
     def hard_value(self):
         for
 
     def soft_value(self):
+
+    def pop(self):
+
 
     def flip(self):
         pass

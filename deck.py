@@ -15,7 +15,7 @@ class Deck(object):
                 deck.append(card)
 
     def shuffle(self):
-        random.deck()
+        random.deck(cards)
 
     def pop(self, deck, card):
         deck.remove(card)
