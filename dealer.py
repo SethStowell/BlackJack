@@ -18,7 +18,7 @@ class Dealer(object):
     def shuffle(self):
         self.deck.shuffle()
 
-    def pay_out(self):
+    def pay_out(self, money):
         """Pay players after they win a hand"""
         #
         # Blackjack pays 3 to 2
@@ -26,6 +26,8 @@ class Dealer(object):
         #
         if self.hand.is_busted() == False and self.player.hand > self.dealer.hand:
             payout = True
+            if payout == True:
+                self.money = money - (self.player.hand.bet * 3/2)
 
 
     def rake_in(self, money):
