@@ -33,3 +33,5 @@ def informal_hand_test():
     except RuleError as error:
         print(error)
         print("tried and failed to hit. Invalid move.")
+
+informal_hand_test()

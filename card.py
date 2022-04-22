@@ -29,24 +29,29 @@ class Card(object):
     softValueDict = dict(zip(names, softValues))
 
 
-    def __init__(self, card, hardValue, softValue):
+    def __init__(self, card, hardValue, softValue, isShowing):
         self.card = card
         self.hardValue = hardValue
         self.softValue = softValue
+        self.isShowing = False
 
     def __str__(self):
         return f'{self.name}'
 
     def hard_value(self):
-        for
+        return self.card.hardValueDict
 
     def soft_value(self):
+        return self.card.softValueDict
 
     def pop(self):
-
+        pass
 
     def flip(self):
-        pass
+        if self.isShowing == False:
+            self.isShowing = True
+        else:
+            self.isShowing = False
 
     def is_showing(self):
         return self.is_showing()

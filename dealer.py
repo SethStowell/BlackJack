@@ -20,9 +20,20 @@ class Dealer(object):
 
     def pay_out(self):
         """Pay players after they win a hand"""
-        pass
+        #
+        # Blackjack pays 3 to 2
+        # ex: $10 bet + $15 winnings = $25 total
+        #
+        if self.hand.is_busted() == False and self.player.hand > self.dealer.hand:
+            payout = True
 
-    def rake_in(self):
+
+    def rake_in(self, money):
         """Seize bets from all busted hands"""
+        if self.hand.is_busted() == True:
+            self.money = money + self.player.hand.bet
+
+    def play(self):
+        """Play round"""
         pass
 

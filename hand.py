@@ -20,7 +20,7 @@ class Hand(object):
         return value
 
     def soft_value(self):
-        """All cards have the same value, but Ace = 11"""
+        """All cards have the same value, except Ace = 11"""
         value = 0
         for card in self:
             value += card.softValue
