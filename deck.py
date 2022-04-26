@@ -1,5 +1,5 @@
 from random import random
-
+from card import Card
 
 class Deck(object):
 
@@ -28,6 +28,15 @@ class Deck(object):
             string = f'{card}\n'
             card.flip()
         return string
+
+    def create_deck(self):
+        for suit, shortSuit in zip(Deck.suits, Deck.shortSuits):
+            for name, shortName in zip(Deck.names, Deck.shortNames):
+                hardValue = Deck.hardValues[shortName]
+                softValue = Deck.softValues[shortName]
+                card = Card(hardValue, softValue, shortName, name, suit, shortSuit)
+                self.cards.append(card)
+
 
     def shuffle(self):
         random.shuffle(self.cards)

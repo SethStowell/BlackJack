@@ -20,7 +20,7 @@ def card_test():
         Getting the name of a card
     :return: None
     """
-    card = Card('ace', 'spades')
+    card = Card('Ace', 'Spades')
     print(f'card = {card}')
     print(f'card.softvalue() = {card.softvalue()}')
     print(f'card.hardvalue() = {card.hardvalue()}')
@@ -39,4 +39,5 @@ def deck_test():
     print(deck)
     deck.shuffle()
     print(deck)
+
 main()

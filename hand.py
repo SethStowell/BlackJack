@@ -1,3 +1,5 @@
+from toolbox import CallError
+
 from card import Card
 
 class Hand(object):

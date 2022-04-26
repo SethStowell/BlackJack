@@ -14,6 +14,7 @@ class Dealer(object):
     def deal(self):
         for player in self.table.players():
             self.deck.pop()
+            self.deck.pop()
 
     def shuffle(self):
         self.deck.shuffle()
