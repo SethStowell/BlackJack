@@ -29,12 +29,14 @@ class Card(object):
     softValueDict = dict(zip(names, softValues))
 
 
-    def __init__(self, card, hardValue, softValue, suit, shortSuit, isShowing):
+    def __init__(self, card, hardValue, softValue, suit, shortSuit, name, shortName, isShowing):
         self.card = card
         self.hardValue = hardValue
         self.softValue = softValue
         self.suit = suit
         self.shortSuit = shortSuit
+        self.name = name
+        self.shortName = shortName
         self.isShowing = False
 
     def __str__(self):
