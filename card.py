@@ -40,11 +40,23 @@ class Card(object):
     def __str__(self):
         return f'{self.name}'
 
-    def hard_value(self):
-        return self.card.hardValueDict
+    def get_hard_value(self):
+        return self.hardValue
 
-    def soft_value(self):
-        return self.card.softValueDict
+    def get_soft_value(self):
+        return self.softValue
+
+    def get_name(self):
+        return self.name
+
+    def get_short_name(self):
+        return self.shortName
+
+    def get_suit(self):
+        return self.suit
+
+    def get_short_suit(self):
+        return self.shortSuit
 
     def pop(self):
         pass
@@ -59,3 +71,10 @@ class Card(object):
         return self.is_showing()
 
 
+
+    hardValue = property(get_hard_value)
+    softValue = property(get_soft_value)
+    name = property(get_name)
+    shortName = property(get_short_name)
+    suit = property(get_suit)
+    shortSuit = property(get_short_suit)
