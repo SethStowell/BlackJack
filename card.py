@@ -30,16 +30,20 @@ class Card(object):
 
 
     def __init__(self, name, shortName, suit, shortSuit, hardValue, softValue):
-        self.name = name
-        self.shortName = shortName
-        self.suit = suit
-        self.shortSuit = shortSuit
-        self.hardValue = hardValue
-        self.softValue = softValue
-        self.isShowing = False
+        self._name = name
+        self._shortName = shortName
+        self._suit = suit
+        self._shortSuit = shortSuit
+        self._hardValue = hardValue
+        self._softValue = softValue
+        self._isShowing = False
 
     def __str__(self):
-        return f'{self.name}'
+        if self._isShowing:
+            string = f'{self._name} of {self._suit} {self._shortSuit}: {self._hardValue}'
+        else:
+            string = 'Cool card design'
+        return string
 
     def get_hard_value(self):
         return self.hardValue

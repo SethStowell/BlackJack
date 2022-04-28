@@ -22,8 +22,8 @@ def card_test():
     """
     card = Card('Ace', 'A', 'Spades', '\u2660', '1', '11')
     print(f'card = {card}')
-    print(f'card.softvalue() = {card.softvalue()}')
-    print(f'card.hardvalue() = {card.hardvalue()}')
+    print(f'card.softValue() = {card.softValue()}')
+    print(f'card.hardValue() = {card.hardValue()}')
     print(f'card.suit() = {card.suit()}')
     print(f'card.name() = {card.name()}')
 
