@@ -1,4 +1,3 @@
-from deck import Deck
 
 class Card(object):
 
@@ -19,6 +18,7 @@ class Card(object):
     names = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King']
     shortNames = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K']
 
+
     shortNameDict = dict(zip(names, shortNames))
 
     hardValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
@@ -29,14 +29,13 @@ class Card(object):
     softValueDict = dict(zip(names, softValues))
 
 
-    def __init__(self, card, hardValue, softValue, suit, shortSuit, name, shortName, isShowing):
-        self.card = card
-        self.hardValue = hardValue
-        self.softValue = softValue
-        self.suit = suit
-        self.shortSuit = shortSuit
+    def __init__(self, name, shortName, suit, shortSuit, hardValue, softValue):
         self.name = name
         self.shortName = shortName
+        self.suit = suit
+        self.shortSuit = shortSuit
+        self.hardValue = hardValue
+        self.softValue = softValue
         self.isShowing = False
 
     def __str__(self):
@@ -71,8 +70,6 @@ class Card(object):
 
     def is_showing(self):
         return self.is_showing()
-
-
 
     hardValue = property(get_hard_value)
     softValue = property(get_soft_value)

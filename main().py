@@ -20,7 +20,7 @@ def card_test():
         Getting the name of a card
     :return: None
     """
-    card = Card('Ace', 'Spades')
+    card = Card('Ace', 'A', 'Spades', '\u2660', '1', '11')
     print(f'card = {card}')
     print(f'card.softvalue() = {card.softvalue()}')
     print(f'card.hardvalue() = {card.hardvalue()}')
