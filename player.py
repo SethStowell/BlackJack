@@ -21,21 +21,6 @@ class Player(object):
         self.hands.append(hand)
         return hand
 
-    def join_table(self):
-        pass
-
-    def leave_table(self):
-        pass
-
-    def get_table(self):
-        return self.table
-
-    def get_money(self):
-        return self.money
-
-    table = property(get_table)
-    money = property(get_money)
-
     def add_hand(self, hand):
         """Adds a hand to self._hands."""
         self._hands.append(hand)
@@ -57,6 +42,12 @@ class Player(object):
                 command = input(prompt).upper()
         return command
 
+    def join_table(self):
+        pass
+
+    def leave_table(self):
+        pass
+
     def get_hands(self):
         return self._hands
 
@@ -68,3 +59,9 @@ class Player(object):
 
     def set_money(self, money):
         self._money = money
+
+    def get_table(self):
+        return self.table
+
+    table = property(get_table)
+    money = property(get_money)

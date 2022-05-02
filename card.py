@@ -36,11 +36,11 @@ class Card(object):
         self._shortSuit = shortSuit
         self._hardValue = hardValue
         self._softValue = softValue
-        self._isShowing = False
+        self._isShowing = True
 
     def __str__(self):
         if self._isShowing:
-            string = f'{self._name} of {self._suit} {self._shortSuit}: {self._hardValue}'
+            string = f'{self._name} of {self._suit} {self._shortSuit} {self._hardValue}'
         else:
             string = 'Card is face down'
         return string
@@ -67,10 +67,10 @@ class Card(object):
         pass
 
     def flip(self):
-        if self.isShowing == False:
-            self.isShowing = True
+        if self._isShowing == False:
+            self._isShowing = True
         else:
-            self.isShowing = False
+            self._isShowing = False
 
     def is_showing(self):
         return self.is_showing()

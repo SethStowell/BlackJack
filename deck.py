@@ -17,9 +17,8 @@ class Deck(object):
     softValues = {"K": 10, "Q": 10, "J": 10, "10": 10, "9": 9, "8": 8, "7": 7, "6": 6, "5": 5, "4": 4, "3": 3, "2": 2,
                   "A": 11}
 
-    def __init__(self, deckType, size):
+    def __init__(self, cards, size):
         self._cards = []
-        self._deckType = deckType
         self._size = size
 
     def __str__(self):

@@ -7,7 +7,7 @@ def main():
     :return: None
     """
     card_test()
-    #deck_test()
+    deck_test()
 
 
 def card_test():
@@ -23,10 +23,10 @@ def card_test():
     """
     card = Card('Ace', 'A', 'Spades', '\u2660', '1', '11')
     print(f'card = {card}')
-    print(f'card.softValue() = {card.softValue()}')
-    print(f'card.hardValue() = {card.hardValue()}')
-    print(f'card.suit() = {card.suit()}')
-    print(f'card.name() = {card.name()}')
+    print(f'card.softValue() = {card.softValue}')
+    print(f'card.hardValue() = {card.hardValue}')
+    print(f'card.suit() = {card.suit}')
+    print(f'card.name() = {card.name}')
 
 def deck_test():
     """
@@ -36,7 +36,7 @@ def deck_test():
         Shuffle a deck of cards
     :return: None
     """
-    deck = Deck()
+    deck = Deck(52, 1)
     print(deck)
     deck.shuffle()
     print(deck)
