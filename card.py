@@ -42,7 +42,7 @@ class Card(object):
         if self._isShowing:
             string = f'{self._name} of {self._suit} {self._shortSuit}: {self._hardValue}'
         else:
-            string = 'Cool card design'
+            string = 'Card is face down'
         return string
 
     def get_hard_value(self):
