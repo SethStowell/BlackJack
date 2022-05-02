@@ -46,22 +46,22 @@ class Card(object):
         return string
 
     def get_hard_value(self):
-        return self.hardValue
+        return self._hardValue
 
     def get_soft_value(self):
-        return self.softValue
+        return self._softValue
 
     def get_name(self):
-        return self.name
+        return self._name
 
     def get_short_name(self):
-        return self.shortName
+        return self._shortName
 
     def get_suit(self):
-        return self.suit
+        return self._suit
 
     def get_short_suit(self):
-        return self.shortSuit
+        return self._shortSuit
 
     def pop(self):
         pass
