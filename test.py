@@ -1,4 +1,3 @@
-
 from hand import Hand
 
 def informal_hand_test():

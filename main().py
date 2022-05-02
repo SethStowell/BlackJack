@@ -36,7 +36,7 @@ def deck_test():
         Shuffle a deck of cards
     :return: None
     """
-    deck = Deck(52, 1)
+    deck = Deck(1)
     print(deck)
     deck.shuffle()
     print(deck)

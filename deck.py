@@ -17,7 +17,7 @@ class Deck(object):
     softValues = {"K": 10, "Q": 10, "J": 10, "10": 10, "9": 9, "8": 8, "7": 7, "6": 6, "5": 5, "4": 4, "3": 3, "2": 2,
                   "A": 11}
 
-    def __init__(self, cards, size):
+    def __init__(self, size):
         self._cards = []
         self._size = size
 
@@ -33,7 +33,7 @@ class Deck(object):
             for name, shortName in zip(Deck.names, Deck.shortNames):
                 hardValue = Deck.hardValues[shortName]
                 softValue = Deck.softValues[shortName]
-                card = Card(hardValue, softValue, shortName, name, suit, shortSuit)
+                card = Card(name, shortName, suit, shortSuit, hardValue, softValue)
                 self.cards.append(card)
 
 
