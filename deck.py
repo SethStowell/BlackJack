@@ -44,8 +44,8 @@ class Deck(object):
 
     def pop(self):
         """Remove the top card from the deck (useful for dealing)"""
-        card = self.cards[0]
-        self.cards.remove(card)
+        card = self._cards[0]
+        self._cards.remove(card)
         return card
 
     def get_cards(self):
