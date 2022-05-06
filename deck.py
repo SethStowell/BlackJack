@@ -1,4 +1,4 @@
-from random import random
+from random import shuffle
 from card import Card
 
 class Deck(object):
@@ -22,6 +22,7 @@ class Deck(object):
         self._size = size
 
     def __str__(self):
+        string = f'Size: {self._size}\n'
         for card in self.cards:
             card.flip()
             string = f'{card}\n'
@@ -38,7 +39,8 @@ class Deck(object):
 
 
     def shuffle(self):
-        random.shuffle(self.cards)
+        shuffle(self._cards)
+        return self._cards
 
     def pop(self):
         """Remove the top card from the deck (useful for dealing)"""
