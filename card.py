@@ -36,7 +36,7 @@ class Card(object):
         self._shortSuit = shortSuit
         self._hardValue = hardValue
         self._softValue = softValue
-        self._isShowing = True
+        self._isShowing = False
 
     def __str__(self):
         if self._isShowing:
@@ -63,6 +63,9 @@ class Card(object):
     def get_short_suit(self):
         return self._shortSuit
 
+    def get_visibility(self):
+        return self._isShowing
+
     def pop(self):
         pass
 
@@ -71,9 +74,6 @@ class Card(object):
             self._isShowing = True
         else:
             self._isShowing = False
-
-    def is_showing(self):
-        return self.is_showing()
 
     hardValue = property(get_hard_value)
     softValue = property(get_soft_value)

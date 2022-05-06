@@ -37,6 +37,11 @@ def deck_test():
     :return: None
     """
     deck = Deck(1)
+    deck.create_deck()
+    print(deck)
+    deck.shuffle()
+    print(deck)
+    deck.shuffle()
     print(deck)
     deck.shuffle()
     print(deck)
