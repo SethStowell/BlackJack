@@ -1,4 +1,5 @@
 from hand import Hand
+from errors import CallError
 
 def informal_hand_test():
     from deck import Deck
@@ -31,7 +32,7 @@ def informal_hand_test():
         c = d.pop()
         c.flip()
         h.hit(c)
-    except RuleError as error:
+    except CallError as error:
         print(error)
         print("tried and failed to hit. Invalid move.")
 
