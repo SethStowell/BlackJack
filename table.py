@@ -1,6 +1,9 @@
 from deck import Deck
 from hand import Hand
 from card import Card
+from player import Player
+from dealer import Dealer
+from toolbox import get_integer_between
 
 class Table(object):
 
