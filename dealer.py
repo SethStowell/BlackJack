@@ -28,10 +28,7 @@ class Dealer(object):
                 hand = Hand(bet)
                 player.money -= bet
                 player.hands.append(hand)
-        #
-        # Must happen outside the for loop to ensure that when someone leaves the program doesn't skip over the
-        # succeeding player.
-        #
+
         for player in leavingPlayers:
             self.player_leave(player)
 
