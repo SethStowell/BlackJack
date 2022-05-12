@@ -1,5 +1,5 @@
 from hand import Hand
-from toolbox import Toolbox
+from toolbox import get_integer_between
 
 class Player(object):
 
