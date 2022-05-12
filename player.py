@@ -3,7 +3,7 @@ from hand import Hand
 class Player(object):
 
     def __init__(self, name, money, table):
-        self.name = name
+        self._name = name
         self._money = money
         self.table = table
 
