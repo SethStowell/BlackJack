@@ -13,8 +13,8 @@ class Table(object):
 
     def manage_table(self):
         """Runs the blackjack program."""
-        print("WELCOME TO BLACKJACK!\n")
-        numberOfPlayers = get_integer_between(1, 7, 'How many players will there be?')
+        print("BLACKJACK!\n")
+        numberOfPlayers = get_integer_between(1, 7, 'How many players will be participating?')
         #
         # Range from 1 to numberOfPlayers+1, so I don't ask for player 0's name
         #
@@ -33,7 +33,7 @@ class Table(object):
             self._dealer.process_hands()
             self._dealer.cleanup()
             self._dealer.take_bets()
-        print('Table is empty. Dealer can go home.')
+        print('Table is empty.')
 
     def add_player(self, player):
         self._players.append(player)
