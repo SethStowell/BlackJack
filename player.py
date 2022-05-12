@@ -6,7 +6,7 @@ class Player(object):
     def __init__(self, name, money, table):
         self._name = name
         self._money = money
-        self.table = table
+        self._table = table
 
     def __str__(self):
         string = f'Name: {self._name}\nMoney: {self._money}\n'

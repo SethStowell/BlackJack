@@ -23,7 +23,7 @@ class Table(object):
         #
         for number in range(1, numberOfPlayers+1):
             name = input(f"What is player {number}'s name? ")
-            player = Player(name, 100)
+            player = Player(name, 100, self)
             self._players.append(player)
         print('')
         self._dealer.take_bets()
@@ -49,5 +49,8 @@ class Table(object):
 
     players = property(get_players)
     dealer = property(get_dealer)
+
+table = Table()
+table.manage_table()
 
 

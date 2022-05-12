@@ -6,8 +6,8 @@ class Dealer(object):
 
     def __init__(self, name, money, table):
         self.name = name
-        self.money = money
-        self.hand = Hand(0)
+        self._money = money
+        self._hand = Hand(0)
         self.table = table
 
     def __str__(self):
